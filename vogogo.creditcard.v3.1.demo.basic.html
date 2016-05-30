@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form action="/test/v2" method="POST" id="vogogo-form">
+<!--     <form action="/test/v2" method="POST" id="vogogo-form">
 
         <input type="hidden" data-vogogo="client_id"   value="live-2f7b11b8ad91547f306ca94ad28966c23b8a4e732d683aebbe101aa4db1f6f41">
         <input type="hidden" data-vogogo="customer_id" value="fc44812d-9b91-4343-9b87-9d28439221c0">
@@ -33,5 +33,71 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="/vogogo.creditcard.v3.1.min.js"></script>
+    -->
+
+      <!-- Set your form ID to vogogo-form so the lib can find it -->
+  <form action='/yourserver/card' method='POST' id='vogogo-form'>
+
+    <!-- Add hidden inputs with your Client ID and the current customer -->
+    <!-- Your Client ID is avaialble at https://app.vogogo.com/settings/api_settings -->
+    <input type="hidden" data-vogogo="client_id"   value="live-2f7b11b8ad91547f306ca94ad28966c23b8a4e732d683aebbe101aa4db1f6f41">
+    <input type="hidden" data-vogogo="customer_id" value="fc44812d-9b91-4343-9b87-9d28439221c0"" />
+
+    <!-- Add data-vogogo attributes so the lib can find the values it needs -->
+    <!-- Remove the name attributes so these fields are not posted to your server -->
+    <input type="text" data-vogogo="name" />
+    <input type="text" data-vogogo="number" />
+    <input type="text" data-vogogo="expiry_date_month" />
+    <input type="text" data-vogogo="expiry_date_year" />
+    <input type="text" data-vogogo="address_street_1" />
+    <input type="text" data-vogogo="address_street_2" />
+    <input type="text" data-vogogo="address_city" />
+    <input type="text" data-vogogo="address_state" />
+    <input type="text" data-vogogo="address_country" />
+    <input type="text" data-vogogo="address_postal_code" />
+    <input type="file" data-vogogo="photo" accept="image/*" />
+
+    <!-- Optionally, add an element to display any errors -->
+    <div id="vogogo-form-errors"></div>
+
+    <input type="submit" value="Add Card" />
+  </form>
+
+  <!-- Include jQuery and vogogo.creditcard.v3.1.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="vogogo.creditcard.v3.1.min.js"></script>
 </body>
 </html>
+
+  <!-- Set your form ID to vogogo-form so the lib can find it -->
+  <form action='/yourserver/card' method='POST' id='vogogo-form'>
+
+    <!-- Add hidden inputs with your Client ID and the current customer -->
+    <!-- Your Client ID is avaialble at https://app.vogogo.com/settings/api_settings -->
+    <input type="hidden" data-vogogo="client_id"   value="live-2f7b11b8ad91547f306ca94ad28966c23b8a4e732d683aebbe101aa4db1f6f41">
+    <input type="hidden" data-vogogo="customer_id" value="fc44812d-9b91-4343-9b87-9d28439221c0"" />
+
+    <!-- Add data-vogogo attributes so the lib can find the values it needs -->
+    <!-- Remove the name attributes so these fields are not posted to your server -->
+    <input type="text" data-vogogo="name" />
+    <input type="text" data-vogogo="number" />
+    <input type="text" data-vogogo="expiry_date_month" />
+    <input type="text" data-vogogo="expiry_date_year" />
+    <input type="text" data-vogogo="address_street_1" />
+    <input type="text" data-vogogo="address_street_2" />
+    <input type="text" data-vogogo="address_city" />
+    <input type="text" data-vogogo="address_state" />
+    <input type="text" data-vogogo="address_country" />
+    <input type="text" data-vogogo="address_postal_code" />
+    <input type="file" data-vogogo="photo" accept="image/*" />
+
+    <!-- Optionally, add an element to display any errors -->
+    <div id="vogogo-form-errors"></div>
+
+    <input type="submit" value="Add Card" />
+  </form>
+
+  <!-- Include jQuery and vogogo.creditcard.v3.1.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="vogogo.creditcard.v3.1.min.js"></script>
+
